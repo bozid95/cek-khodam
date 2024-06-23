@@ -24,33 +24,35 @@
         </div>
         <div id="output"></div>
 
-        <div class="card-footer text-secondary">dibuat oleh Widodo yang sedang Gabut <3</div> </div> <script
-                src="data-khodam.js">
-                </script>
-                <script>
-                    function getRandomData() {
-                        let nama = document.getElementById("nama").value;
+        <div class="card-footer text-secondary">dibuat oleh Widodo yang sedang Gabut <3 <br>
+                <a href="https://github.com/bozid95/cek-khodam">Link Github</a>
+        </div>
+    </div>
+    <script src="data-khodam.js">
+    </script>
+    <script>
+        function getRandomData() {
+            let nama = document.getElementById("nama").value;
 
-                        // Validasi: Periksa apakah input nama kosong
-                        if (nama.trim() === "") {
-                            alert("Silakan masukkan nama dulu");
-                            return; // Hentikan eksekusi jika input kosong
-                        }
+            // Validasi: Periksa apakah input nama kosong
+            if (nama.trim() === "") {
+                alert("Silakan masukkan nama dulu");
+                return; // Hentikan eksekusi jika input kosong
+            }
 
-                        let randomItem = jsonContent.dataKhodam[Math.floor(Math.random() * jsonContent.dataKhodam
-                            .length)];
-                        let outputDiv = document.getElementById("output");
-                        outputDiv.innerHTML = `
+            let randomItem = jsonContent.dataKhodam[Math.floor(Math.random() * jsonContent.dataKhodam
+                .length)];
+            let outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
         <p> Setelah saya analisis dan bertapa selama 1 detik, bahwa saudara yang bernama <b>${nama}</b><p>
         <p><b>mempunyai khodam</b><br> ${randomItem.title}</p>
         <p><b>Makna Khodam kamu yaitu</b> <br> ${randomItem.desc}</p>
     `;
-                    }
-                </script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                    crossorigin="anonymous">
-                </script>
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
