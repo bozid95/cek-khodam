@@ -9,8 +9,8 @@
     <title>CEK KHODAM</title>
 </head>
 
-<body class="text-bg-dark">
-    <div class="card text-center m-3 text-bg-dark">
+<body class="bg-black d-flex justify-content-center">
+    <div class="card text-center m-3 text-bg-dark shadow-lg p-3 mb-5  w-75 p-3 align-content-center ">
         <div class="card-header">
             <h1>CEK KHODAM AMPUH DIJAMIN HALAL</h1>
         </div>
@@ -37,6 +37,13 @@
             // Validasi: Periksa apakah input nama kosong
             if (nama.trim() === "") {
                 alert("Silakan masukkan nama dulu");
+                return; // Hentikan eksekusi jika input kosong
+            }
+            if (nama.trim() === "widodo" || nama.trim() === "Widodo") {
+                let outputDiv = document.getElementById("output");
+                outputDiv.innerHTML = `
+        <p><b>Ganteng dan Intelek</b></p>
+    `;
                 return; // Hentikan eksekusi jika input kosong
             }
 
